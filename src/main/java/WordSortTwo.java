@@ -1,6 +1,6 @@
 //(c) A+ Computer Science
 //www.apluscompsci.com
-//Name -
+//Name - Carter Hoversten
 
 import java.util.Arrays;
 import java.util.Scanner;
@@ -10,16 +10,22 @@ public class WordSortTwo {
 	private String[] wordRay;
 
 	public WordSortTwo(String sentence) {
+		setWords(sentence);
+	    sort();
 	}
 
 	public void setWords(String sentence) {
+		wordRay = sentence.split(" ");
 	}
 
 	public void sort() {
+		Arrays.sort(wordRay);
 	}
-
-	public String toString() {
-		String output = "";
-		return output + "\n\n";
+	public String[] getWordRay(){
+		return wordRay;
 	}
-}
+	public void finalPrint() {
+		for(int j =0; j< getWordRay().length; j++){
+			System.out.println(wordRay[j]);
+	}
+}}
