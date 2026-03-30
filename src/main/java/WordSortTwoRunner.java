@@ -19,9 +19,7 @@ public class WordSortTwoRunner
 		{
 			String sentence = file.nextLine();
 			WordSortTwo ws = new WordSortTwo(sentence);
-			for(int j =0; j< ws.getWordRay().length; j++){
-			System.out.print(ws.toString(j));
+			ws.finalPrint();
 		}
 		}
 	}
-}

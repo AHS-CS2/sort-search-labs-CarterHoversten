@@ -24,8 +24,8 @@ public class WordSortTwo {
 	public String[] getWordRay(){
 		return wordRay;
 	}
-	public String toString(int word) {
-		String output = wordRay[word];
-		return output + "\n\n";
+	public void finalPrint() {
+		for(int j =0; j< getWordRay().length; j++){
+			System.out.println(wordRay[j]);
 	}
-}
+}}
