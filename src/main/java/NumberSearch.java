@@ -12,6 +12,14 @@ public class NumberSearch
 {
 	public static int getNextLargest(int[] numArray, int searchNum)
 	{
-		return -1;
+		int finalNum = 0;
+		int tracker = 100000;
+		for(int i = 0; i < numArray.length; i++){
+			if(numArray[i] > searchNum && numArray[i]-searchNum < tracker){
+				finalNum = numArray[i];
+				tracker = numArray[i] - searchNum;
+			}
+		}
+		return finalNum;
 	}
 }
